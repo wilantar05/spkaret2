@@ -64,14 +64,14 @@
             <div class="intro-item fl-wrap">
               <span class="section-separator"></span>
               <div class="bubbles">
-                <h1>PANDUMAS</h1>
-                <h2 style="color: azure;">ADALAH SISTEM PENGADUAN MASYARAKAT YANG DIBUAT UNTUK MENERIMA KRITIK, SARAN, DAN PERTANYAAN KEPADA KANTOR DESA TELAGATAWANG</h2>
+                <h1>SP KARET</h1>
+                <h2 style="color: azure;">SISTEM PAKAR UNTUK KONSULTASI PENYAKIT TANAMAN KARET</h2>
               </div>
             </div>
             <!-- main-search-input-tabs-->
             <div class="main-search-input-tabs  tabs-act fl-wrap">
               <ul class="tabs-menu change_bg no-list-style">
-                <li class="current"><a href="#tab-inpt1" data-bgtab="<?php echo site_url(); ?>assets/umum/images/bg/hero/bg.jpg">Ajukan Laporan</a></li>
+                <li class="current"><a href="#tab-inpt1" data-bgtab="<?php echo site_url(); ?>assets/umum/images/bg/hero/bg.jpg">Mulai Konsultasi</a></li>
               </ul>
               <!--tabs -->
 
