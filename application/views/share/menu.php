@@ -14,7 +14,7 @@
     } else {
     ?>
         <!-- header opt -->
-       
+
         <!-- header opt end-->
     <?php
     }
@@ -49,13 +49,7 @@
                     <!--second level end-->
                 </li>
                 <li>
-                    <a href="<?php echo site_url(); ?>umum_cek_awal">Pantau Pengaduan</a>
-                </li>
-                <li>
                     <a href="<?php echo site_url(); ?>tentang">Tentang</a>
-                </li>
-                <li>
-                    <a href="<?php echo site_url(); ?>info">Berita</a>
                 </li>
                 <?php
                 $useragent = $_SERVER['HTTP_USER_AGENT'];

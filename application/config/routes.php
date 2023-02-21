@@ -57,9 +57,16 @@ $route['info'] = 'Umum_Info/index';
 $route['admin_info'] = 'Admin_Informasi';
 $route['admin'] = 'admin_beranda';
 $route['data_admin'] = 'Admin';
+$route['gejala'] = 'admin_gejala';
+$route['tambah_gejala'] = 'admin_gejala/tambah';
+$route['penyakit'] = 'admin_penyakit';
+$route['tambah_penyakit'] = 'admin_penyakit/tambah';
+$route['rules'] = 'admin_rules';
+$route['tambah_rules'] = 'admin_rules/tambah';
+
 $route['jenis_pengaduan'] = 'Admin_Jenis_Pengaduan';
 $route['jenis_informasi'] = 'Admin_Jenis_Informasi';
-$route['data'] = 'Admin_Pengaduan';
+
 $route['datadiv'] = 'Admindiv_Pengaduan';
 $route['login'] = 'Login/login';
 $route['login_proses'] = 'Login/proses_login';
