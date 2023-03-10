@@ -75,7 +75,7 @@
 
                             <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                 <div class="custom-form" style="padding: 20px;">
-                                    <form action="<?php echo site_url(); ?>up_admin" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo site_url(); ?>up_penyakit" method="post" enctype="multipart/form-data">
 
                                         <div class="row">
                                             <div class="col-sm-12">

@@ -51,18 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 /*-----------------------------------------------------------------------*/
 $route['default_controller'] = 'Umum_Home/cek';
-$route['beranda'] = 'Umum_Home';
-$route['tentang'] = 'Umum_Tentang';
-$route['info'] = 'Umum_Info/index';
-$route['admin_info'] = 'Admin_Informasi';
-$route['admin'] = 'admin_beranda';
-$route['data_admin'] = 'Admin';
-$route['gejala'] = 'admin_gejala';
-$route['tambah_gejala'] = 'admin_gejala/tambah';
-$route['penyakit'] = 'admin_penyakit';
-$route['tambah_penyakit'] = 'admin_penyakit/tambah';
-$route['rules'] = 'admin_rules';
-$route['tambah_rules'] = 'admin_rules/tambah';
+
 
 $route['jenis_pengaduan'] = 'Admin_Jenis_Pengaduan';
 $route['jenis_informasi'] = 'Admin_Jenis_Informasi';
@@ -120,3 +109,36 @@ $route['kades_hapus'] = 'Kades/hapus_admin';
 
 $route['404_override'] = 'Custom404';
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+//ini yg kepake
+$route['beranda'] = 'Umum_Home';
+$route['tentang'] = 'Umum_Tentang';
+$route['info'] = 'Umum_Info/index';
+$route['admin_info'] = 'Admin_Informasi';
+$route['admin'] = 'admin_beranda';
+$route['data_admin'] = 'Admin';
+
+
+
+$route['rules'] = 'admin_rules';
+$route['tambah_rules'] = 'admin_rules/tambah';
+
+#Gejala
+$route['gejala'] = 'admin_gejala';
+$route['tambah_gejala'] = 'admin_gejala/tambah';
+$route['up_gejala'] = 'admin_gejala/insert';
+$route['detail_gejala'] = 'admin_gejala/detail';
+$route['update_gejala'] = 'admin_gejala/update';
+$route['delete_gejala'] = 'admin_gejala/delete';
+#------#
+
+#Penyakit
+$route['penyakit'] = 'admin_penyakit';
+$route['tambah_penyakit'] = 'admin_penyakit/tambah';
+$route['up_penyakit'] = 'admin_penyakit/insert';
+$route['detail_penyakit'] = 'admin_penyakit/detail';
+$route['update_penyakit'] = 'admin_penyakit/update';
+$route['delete_penyakit'] = 'admin_penyakit/delete';
+#------#

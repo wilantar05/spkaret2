@@ -76,16 +76,20 @@
                                         <tbody>
                                             <?php
                                             $i = 0;
-                                            foreach ($semua_pengaduan as $pengaduan) {
+                                            foreach ($penyakit as $p) {
                                                 $i++;
                                             ?>
                                                 <tr>
                                                     <td><?php echo $i; ?></td>
 
-                                                    <td><?php echo $pengaduan->nama; ?></td>
+                                                    <td><?php echo $p->nama_penyakit; ?></td>
 
 
-                                                    <td><a href="<?php echo site_url(); ?>detail_lapor_admin?id=<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
+                                                    <td>
+                                                        <a href="<?php echo site_url(); ?>detail_penyakit?id=<?php echo $p->id_penyakit; ?>"><button type="button" class="btn btn-warning">Edit</button></a>
+                                                        <a onclick="return confirm('Hapus data ?')" href=" <?php echo site_url(); ?>delete_penyakit?id=<?php echo $p->id_penyakit; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+
+                                                    </td>
                                                 </tr>
                                             <?php } ?>
 

@@ -4,7 +4,7 @@
 <head>
     <!--=============== basic  ===============-->
     <meta charset="UTF-8">
-    <title>Tambah Gejala</title>
+    <title>Edit Gejala</title>
     <?php echo $this->load->view('share/author', '', TRUE); ?>
     <!--=============== css  ===============-->
     <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
@@ -67,25 +67,27 @@
                         <!-- dashboard content-->
                         <div class="col-md-9">
                             <div class="dashboard-title fl-wrap">
-                                <h3>Tambah Gejala</h3>
+                                <h3>Edit Admin</h3>
+
                             </div>
                             <!-- list-single-facts -->
 
                             <!-- list-single-facts end -->
-
+                            <?php foreach ($gejala as $g)
+                            ?>
                             <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                 <div class="custom-form" style="padding: 20px;">
-                                    <form action="<?php echo site_url(); ?>up_gejala" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo site_url(); ?>update_gejala?id=<?php echo $g->id_gejala; ?>" method="post" enctype="multipart/form-data">
 
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <label style="padding: 10px;">Nama Gejala<i class="fal fa-user" style="top: 50px;"></i></label>
-                                                <input required type="text" name="nama_gejala" placeholder="Masukkan Nama Gejala">
+                                                <input required type="text" name="nama_gejala" value="<?php echo $g->nama_gejala; ?>">
                                             </div>
-
                                     </form>
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary">Tambah</button>
+                                        <a href="<?php echo site_url(); ?>admin_gejala"><button type="button" class="btn btn-primary">Cancel</button></a>
+                                        <button type="submit" class="btn btn-warning">Update</button>
                                         <div>
                                         </div>
                                     </div>

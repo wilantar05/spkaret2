@@ -76,16 +76,18 @@
                                         <tbody>
                                             <?php
                                             $i = 0;
-                                            foreach ($semua_pengaduan as $pengaduan) {
+                                            foreach ($gejala as $g) {
                                                 $i++;
                                             ?>
                                                 <tr>
                                                     <td><?php echo $i; ?></td>
 
-                                                    <td><?php echo $pengaduan->nama; ?></td>
+                                                    <td><?php echo $g->nama_gejala; ?></td>
 
-
-                                                    <td><a href="<?php echo site_url(); ?>detail_lapor_admin?id=<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
+                                                    <td>
+                                                        <a href="<?php echo site_url(); ?>detail_gejala?id=<?php echo $g->id_gejala; ?>"><button type="button" class="btn btn-warning">Edit</button></a>
+                                                        <a onclick="return confirm('Hapus data ?')" href=" <?php echo site_url(); ?>delete_gejala?id=<?php echo $g->id_gejala; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+                                                    </td>
                                                 </tr>
                                             <?php } ?>
 
