@@ -4,7 +4,7 @@ class m_rules extends CI_Model
 
     function show_rules()
     {
-        $query = $this->db->query("SELECT * FROM `tb_rules`");
+        $query = $this->db->query("SELECT id_gejala, nama_gejala, id_penyakit, nama_penyakit, nilai_md, nilai_mb, nilai_cf FROM `tb_rules` JOIN `tb_gejala` USING (id_gejala) JOIN `tb_penyakit` USING (id_penyakit)");
         return $query->result();
     }
 

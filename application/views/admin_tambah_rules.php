@@ -79,13 +79,22 @@
 
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <label style="padding: 10px;">Nama Gejala<i class="fal fa-user" style="top: 50px;"></i></label>
-                                                <input required type="text" name="nama_gejala" placeholder="Masukkan Nama Gejala">
+                                                <label style="padding: 10px;">Nama Gejala</label>
+                                                <!-- <input required type="text" name="nama_gejala" placeholder="Masukkan Nama Gejala"> -->
+                                                <select class="form-control" name="idGejala">
+                                                    <?php foreach ($gejala as $g) { ?>
+                                                        <option value="<?php echo $g->id_gejala; ?>"><?php echo $g->nama_gejala; ?> </option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
 
                                             <div class="col-sm-6">
-                                                <label style="padding: 10px;">Nama Penyakit<i class="fal fa-user" style="top: 50px;"></i></label>
-                                                <input required type="text" name="nama_penyakit" placeholder="Masukkan Nama Penyakit">
+                                                <label style="padding: 10px;">Nama Penyakit</label>
+                                                <select class="form-control" name="idGejala">
+                                                    <?php foreach ($penyakit as $p) { ?>
+                                                        <option value="<?php echo $p->id_penyakit; ?>"><?php echo $p->nama_penyakit; ?> </option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
 
                                             <div class="col-sm-6">
