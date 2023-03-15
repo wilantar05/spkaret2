@@ -75,13 +75,13 @@
 
                             <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                 <div class="custom-form" style="padding: 20px;">
-                                    <form action="<?php echo site_url(); ?>up_admin" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo site_url(); ?>up_rules" method="post" enctype="multipart/form-data">
 
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <label style="padding: 10px;">Nama Gejala</label>
                                                 <!-- <input required type="text" name="nama_gejala" placeholder="Masukkan Nama Gejala"> -->
-                                                <select class="form-control" name="idGejala">
+                                                <select class="form-control" name="id_gejala">
                                                     <?php foreach ($gejala as $g) { ?>
                                                         <option value="<?php echo $g->id_gejala; ?>"><?php echo $g->nama_gejala; ?> </option>
                                                     <?php } ?>
@@ -90,7 +90,7 @@
 
                                             <div class="col-sm-6">
                                                 <label style="padding: 10px;">Nama Penyakit</label>
-                                                <select class="form-control" name="idGejala">
+                                                <select class="form-control" name="id_penyakit">
                                                     <?php foreach ($penyakit as $p) { ?>
                                                         <option value="<?php echo $p->id_penyakit; ?>"><?php echo $p->nama_penyakit; ?> </option>
                                                     <?php } ?>
@@ -98,17 +98,17 @@
                                             </div>
 
                                             <div class="col-sm-6">
-                                                <label style="padding: 10px;">Nilai MD<i class="fal fa-user" style="top: 50px;"></i></label>
+                                                <label style="padding: 10px;">Nilai MD</label>
                                                 <input required type="text" name="nilai_md" placeholder="Nilai 1-10">
                                             </div>
 
                                             <div class="col-sm-6">
-                                                <label style="padding: 10px;">Nilai MB<i class="fal fa-user" style="top: 50px;"></i></label>
+                                                <label style="padding: 10px;">Nilai MB</label>
                                                 <input required type="text" name="nilai_mb" placeholder="Nilai 1-10">
                                             </div>
 
                                             <div class="col-sm-6">
-                                                <label style="padding: 10px;">Nilai CF<i class="fal fa-user" style="top: 50px;"></i></label>
+                                                <label style="padding: 10px;">Nilai CF</label>
                                                 <input required type="text" name="nilai_cf" placeholder="Nilai 1-10">
                                             </div>
 

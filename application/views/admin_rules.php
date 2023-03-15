@@ -74,21 +74,29 @@
                                                 <th>Nilai MB</th>
                                                 <th>Nilai MD</th>
                                                 <th>Nilai CF</th>
+                                                <th>Detail</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
                                             $i = 0;
-                                            foreach ($semua_pengaduan as $pengaduan) {
+                                            foreach ($rules as $r) {
                                                 $i++;
                                             ?>
                                                 <tr>
                                                     <td><?php echo $i; ?></td>
 
-                                                    <td><?php echo $pengaduan->nama; ?></td>
+                                                    <td><?php echo $r->nama_gejala; ?></td>
+                                                    <td><?php echo $r->nama_penyakit; ?></td>
+                                                    <td><?php echo $r->nilai_md; ?></td>
+                                                    <td><?php echo $r->nilai_mb; ?></td>
+                                                    <td><?php echo $r->nilai_cf; ?></td>
 
+                                                    <td>
+                                                        <a href="<?php echo site_url(); ?>detail_rules?id=<?php echo $r->id_rules; ?>"><button type="button" class="btn btn-warning">Edit</button></a>
+                                                        <a onclick="return confirm('Hapus data ?')" href=" <?php echo site_url(); ?>delete_rules?id=<?php echo $r->id_rules; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+                                                    </td>
 
-                                                    <td><a href="<?php echo site_url(); ?>detail_lapor_admin?id=<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                                 </tr>
                                             <?php } ?>
 

@@ -4,7 +4,7 @@
 <head>
     <!--=============== basic  ===============-->
     <meta charset="UTF-8">
-    <title>Tambah Gejala</title>
+    <title>Edit Penyakit</title>
     <?php echo $this->load->view('share/author', '', TRUE); ?>
     <!--=============== css  ===============-->
     <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
@@ -67,25 +67,59 @@
                         <!-- dashboard content-->
                         <div class="col-md-9">
                             <div class="dashboard-title fl-wrap">
-                                <h3>Tambah Gejala</h3>
+                                <h3>Edit Rules</h3>
+
                             </div>
                             <!-- list-single-facts -->
 
                             <!-- list-single-facts end -->
-
+                            <?php foreach ($rules as $r) ?>
                             <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                 <div class="custom-form" style="padding: 20px;">
-                                    <form action="<?php echo site_url(); ?>up_gejala" method="post" enctype="multipart/form-data">
-
+                                    <form action="<?php echo site_url(); ?>update_rules?id=<?php echo $r->id_rules; ?>" method="post" enctype="multipart/form-data">
                                         <div class="row">
-                                            <div class="col-sm-12">
+                                            <div class="col-sm-6">
                                                 <label style="padding: 10px;">Nama Gejala</label>
-                                                <input required type="text" name="nama_gejala" placeholder="Masukkan Nama Gejala">
+                                                <select class="form-control" nama="id_gejala">
+                                                    <?php foreach ($gejala as $g) { ?>
+
+                                                        <option value="<?php echo $g->id_gejala; ?> " <?php if ($g->id_gejala == $rules[0]->id_gejala) {
+                                                                                                            echo 'selected';
+                                                                                                        } ?>><?php echo $g->nama_gejala; ?> </option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label style="padding: 10px;">Nama Penyakit</label>
+                                                <select class="form-control" nama="id_penyakit">
+                                                    <?php foreach ($penyakit as $p) { ?>
+
+                                                        <option value="<?php echo $p->id_penyakit; ?> " <?php if ($p->id_penyakit == $rules[0]->id_penyakit) {
+                                                                                                            echo 'selected';
+                                                                                                        } ?>><?php echo $p->nama_penyakit; ?> </option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
 
+                                            <div class="col-sm-6">
+                                                <label style="padding: 10px;">Nilai MB</label>
+                                                <input required type="text" name="nilai_mb" value="<?php echo $r->nilai_mb; ?>">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label style="padding: 10px;">Nilai MD</label>
+                                                <input required type="text" name="nilai_md" value="<?php echo $r->nilai_md; ?>">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label style="padding: 10px;">Nilai CF</label>
+                                                <input required type="text" name="nilai_cf" value="<?php echo $r->nilai_cf; ?>">
+                                            </div>
+
+                                        </div>
                                     </form>
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary">Tambah</button>
+                                        <a href="<?php echo site_url(); ?>admin_rules"><button type="button" class="btn btn-primary">Cancel</button></a>
+
+                                        <button type="submit" class="btn btn-warning">Update</button>
                                         <div>
                                         </div>
                                     </div>

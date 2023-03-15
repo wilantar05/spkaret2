@@ -79,7 +79,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <label style="padding: 10px;">Nama Penyakit<i class="fal fa-user" style="top: 50px;"></i></label>
+                                                <label style="padding: 10px;">Nama Penyakit</label>
                                                 <input required type="text" name="nama_penyakit" placeholder="Masukkan Nama Penyakit">
                                             </div>
 

@@ -122,8 +122,6 @@ $route['data_admin'] = 'Admin';
 
 
 
-$route['rules'] = 'admin_rules';
-$route['tambah_rules'] = 'admin_rules/tambah';
 
 #Gejala
 $route['gejala'] = 'admin_gejala';
@@ -142,3 +140,12 @@ $route['detail_penyakit'] = 'admin_penyakit/detail';
 $route['update_penyakit'] = 'admin_penyakit/update';
 $route['delete_penyakit'] = 'admin_penyakit/delete';
 #------#
+
+#Rules
+$route['rules'] = 'admin_rules';
+$route['tambah_rules'] = 'admin_rules/tambah';
+$route['up_rules'] = 'admin_rules/insert';
+$route['detail_rules'] = 'admin_rules/detail';
+$route['update_rules'] = 'admin_rules/update';
+$route['delete_rules'] = 'admin_rules/delete';
+#----#
